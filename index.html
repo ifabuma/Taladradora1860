@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <title>Museo Virtual de la Escuela de Ingenierías Industriales</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Taladradora de columna Whitworth (modelo de 1860 del Museo de Ciencias de Londres)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  
+  <body>
+    
+    <model-viewer 
+      src="Taladradora 1860 GLTF.gltf" 
+      ar ar-modes="webxr scene-viewer quick-look"
+      camera-controls poster="poster.webp"
+      shadow-intensity="1" 
+      ios-src="Taladradora 1860 USDZ.usdz">
+      
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      
+      <button slot="ar-button" id="ar-button">
+          Activar realidad aumentada
+      </button>
+      
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+      
+    </model-viewer>  
+    
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+    
+  </body>
+  
+</html>
